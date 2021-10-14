@@ -17,7 +17,12 @@ router.delete('/delete_archived', async(req,res) => {
     try {
         console.log(req.body)
         const _id = req.body._id
-        const response = await deleteArchived(_id)
+        
+        if(!_id){
+            throw 500;
+        }
+
+        await deleteArchived(_id)
         res.json(200)
 
     } catch(e){

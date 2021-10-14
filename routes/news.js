@@ -15,10 +15,8 @@ router.get('/get_news', async(req,res) => {
 
 router.post('/create_new', async(req,res) => {
     try{
-        console.log("LLAMADA CAPTADA")
         const body = req.body
-        const response = await createNew(body);
-        console.log("SE HA CREAD UNA NOTICIA")
+        await createNew(body);
         res.json(200)
         
     } catch(e){
@@ -34,7 +32,12 @@ router.post('/archive_new', async(req,res) => {
     console.log(_id)
 
 try {
-    const response = await archiveNew(_id);
+
+    if(!_id){
+        throw 500;
+    }
+    
+    await archiveNew(_id);
     
     res.json(200)
 
