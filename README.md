@@ -1,8 +1,8 @@
 # NewsApp_Production
 
-This is a technical test. Front-End and Back-End are merged in one directory for deploy ease.
+This is a technical test. Front-End and Back-End were merged in one directory for deploy ease.
 
-If you want to see the code of Front-End separetly, this link will take you to the Front-End repository: 
+If you want to see the code of Front-End separetly, this link will take you to the Front-End repository: https://github.com/JuanCCA/news-app-FRONT
 
 
 ## Deploy
